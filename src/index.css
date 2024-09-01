@@ -20,3 +20,9 @@ html, body, #root {
     background-color: #121212; /* Dark Background */
     color: #ffffff; /* White Text */
 }
+
+body {
+    background-color: #F5F5F5; /* Light gray background */
+    color: #000000; /* Black text */
+    font-family: 'Arial', sans-serif; /* Clean, sans-serif font */
+}
