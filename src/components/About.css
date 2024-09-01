@@ -4,7 +4,7 @@
     border-radius: 8px; /* Consistent border radius */
     text-align: center;
     max-width: 400px;
-    margin: auto;
+    margin: 20px auto;
 }
 
 .about-title {
@@ -14,4 +14,18 @@
 
 .about-text {
     color: #ffffff; /* White Text */
+}
+
+@media (min-width: 768px) {
+    .about-container {
+        max-width: 600px;
+    }
+
+    .about-title {
+        font-size: 2rem;
+    }
+
+    .about-text {
+        font-size: 1.2rem;
+    }
 }
