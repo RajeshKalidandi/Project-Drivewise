@@ -34,7 +34,39 @@ const styles = StyleSheet.create({
     fontSize: 16,
     fontWeight: 'bold',
   },
-  // ... other styles
+  input: {
+    borderWidth: 1,
+    borderColor: colors.textSecondary,
+    padding: 8,
+    marginBottom: 16,
+    borderRadius: 4,
+  },
+  slot: {
+    padding: 16,
+    borderWidth: 1,
+    borderColor: colors.textSecondary,
+    borderRadius: 4,
+    marginBottom: 8,
+  },
+  selectedSlot: {
+    backgroundColor: colors.accent,
+  },
+  slotText: {
+    color: colors.textPrimary,
+  },
+  slotContainer: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    padding: 16,
+    borderWidth: 1,
+    borderColor: colors.textSecondary,
+    borderRadius: 4,
+    marginBottom: 8,
+  },
+  removeSlot: {
+    color: 'red',
+  },
 });
 
 export default styles;
