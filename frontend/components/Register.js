@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity } from 'react-native';
+import { createUserWithEmailAndPassword } from 'firebase/auth';
+import { auth } from '../firebase';
 import styles from '../styles';
 
 const Register = ({ onRegister }) => {
@@ -7,9 +9,13 @@ const Register = ({ onRegister }) => {
   const [password, setPassword] = useState('');
   const [role, setRole] = useState('client'); // 'client' or 'instructor'
 
-  const handleRegister = () => {
-    // Handle registration logic here
-    onRegister(email, password, role);
+  const handleRegister = async () => {
+    try {
+      await createUserWithEmailAndPassword(auth, email, password);
+      onRegister(email, password, role);
+    } catch (error) {
+      console.error('Error registering:', error);
+    }
   };
 
   return (

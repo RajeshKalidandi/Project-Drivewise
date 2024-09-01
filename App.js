@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { ThemeProvider } from 'styled-components';
 import io from 'socket.io-client';
+import { onAuthStateChanged } from 'firebase/auth';
+import { auth } from './firebase';
 import theme from './theme';
 import { Container, Header, Button, ButtonText } from './components';
 import About from './components/About';
@@ -31,20 +33,32 @@ const App = () => {
     };
   }, []);
 
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, (user) => {
+      if (user) {
+        setIsLoggedIn(true);
+        // Set user role based on your logic
+        setUserRole('client'); // Example role
+      } else {
+        setIsLoggedIn(false);
+        setUserRole(null);
+      }
+    });
+
+    return () => unsubscribe();
+  }, []);
+
   const handleLogin = (email, password) => {
-    // Handle login logic here
     setIsLoggedIn(true);
     setUserRole('client'); // Example role
   };
 
   const handleRegister = (email, password, role) => {
-    // Handle registration logic here
     setIsLoggedIn(true);
     setUserRole(role);
   };
 
   const handleBook = (slot) => {
-    // Handle booking logic here
     console.log('Booked slot:', slot);
   };
 
