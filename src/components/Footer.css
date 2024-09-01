@@ -1,0 +1,13 @@
+.footer {
+    background-color: #000000; /* Black Background */
+    padding: 20px;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+.footer-text {
+    color: #ffffff; /* White Text */
+    margin: 0;
+}

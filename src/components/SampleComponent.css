@@ -1,19 +1,16 @@
-main {
+.sample-container {
+    background-color: #1c1c1c; /* Dark Gray Background */
+    padding: 20px;
+    border-radius: 8px; /* Consistent border radius */
+    text-align: center;
 }
 
-body {
-    margin: 0;
-    font-family: 'Roboto', sans-serif;
-    background-color: #121212; /* Dark Background */
+.sample-title {
     color: #ffffff; /* White Text */
+    margin-bottom: 20px;
 }
 
-a {
-    color: #ffcc00; /* Yellow Links */
-    text-decoration: none;
-}
-
-button {
+.sample-button {
     background-color: #ffcc00; /* Yellow Button */
     color: #000000; /* Black Text */
     border: none;
@@ -22,6 +19,6 @@ button {
     cursor: pointer;
 }
 
-button:hover {
+.sample-button:hover {
     background-color: #e6b800; /* Slightly darker yellow on hover */
 }
