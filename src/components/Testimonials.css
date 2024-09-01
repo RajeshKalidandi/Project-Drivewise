@@ -1,0 +1,18 @@
+.testimonials-container {
+    background-color: #1c1c1c; /* Dark Gray Background */
+    padding: 20px;
+    border-radius: 8px; /* Consistent border radius */
+    text-align: center;
+    max-width: 400px;
+    margin: auto;
+}
+
+.testimonials-title {
+    color: #ffffff; /* White Text */
+    margin-bottom: 20px;
+}
+
+.testimonials-text {
+    color: #ffffff; /* White Text */
+    margin-bottom: 10px;
+}
